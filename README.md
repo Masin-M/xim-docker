@@ -2,7 +2,7 @@
 
 A fully self-contained Docker setup for running Xim by Aamace offline. Everything is built inside Docker - no need to install Java, Node.js, or any other dependencies on your system.
 
-Plase use the ffxiSouncConvert and run it on your Final Fantasy directory first before installing as it takes a long time to convert the .spw and .bgw files to .ogg formats. Do not worry, it will not remove any of the original files.
+Please use the ffxiSouncConvert and run it on your Final Fantasy directory first before installing as it takes a long time to convert the .spw and .bgw files to .ogg formats. Do not worry, it will not remove any of the original files.
 You can find it on my profile.
 
 ## Prerequisites
