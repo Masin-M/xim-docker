@@ -114,21 +114,21 @@ cd "$SCRIPT_DIR"
 export XIM_FFXI_PATH="$FFXI_PATH"
 
 # Persist XIM_FFXI_PATH to ~/.bashrc for future sessions
-BASHRC_FILE="$HOME/.bashrc"
-EXPORT_LINE="export XIM_FFXI_PATH=\"$FFXI_PATH\""
+# BASHRC_FILE="$HOME/.bashrc"
+# EXPORT_LINE="export XIM_FFXI_PATH=\"$FFXI_PATH\""
 
-if grep -q "^export XIM_FFXI_PATH=" "$BASHRC_FILE" 2>/dev/null; then
-    # Update existing entry
-    sed -i "s|^export XIM_FFXI_PATH=.*|$EXPORT_LINE|" "$BASHRC_FILE"
-    echo -e "${GREEN}Updated XIM_FFXI_PATH in ~/.bashrc${NC}"
-else
-    # Add new entry
-    echo "" >> "$BASHRC_FILE"
-    echo "# Xim FFXI path (added by run.sh)" >> "$BASHRC_FILE"
-    echo "$EXPORT_LINE" >> "$BASHRC_FILE"
-    echo -e "${GREEN}Added XIM_FFXI_PATH to ~/.bashrc${NC}"
-fi
-echo ""
+# if grep -q "^export XIM_FFXI_PATH=" "$BASHRC_FILE" 2>/dev/null; then
+#     # Update existing entry
+#     sed -i "s|^export XIM_FFXI_PATH=.*|$EXPORT_LINE|" "$BASHRC_FILE"
+#     echo -e "${GREEN}Updated XIM_FFXI_PATH in ~/.bashrc${NC}"
+# else
+#     # Add new entry
+#     echo "" >> "$BASHRC_FILE"
+#     echo "# Xim FFXI path (added by run.sh)" >> "$BASHRC_FILE"
+#     echo "$EXPORT_LINE" >> "$BASHRC_FILE"
+#     echo -e "${GREEN}Added XIM_FFXI_PATH to ~/.bashrc${NC}"
+# fi
+# echo ""
 
 # Check if image needs building
 if ! docker image inspect xim:latest &> /dev/null; then
