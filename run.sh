@@ -8,7 +8,7 @@
 # This will:
 #   1. Build the Docker image (first time only, or if source changed)
 #   2. Start the container with your FFXI folder mounted
-#   3. Xim will be available at http://localhost:8080
+#   3. Xim will be available at http://localhost:8082
 #
 
 set -e
@@ -150,15 +150,15 @@ echo -e "${GREEN}=============================${NC}"
 echo -e "${GREEN}   Xim is running!${NC}"
 echo -e "${GREEN}=============================${NC}"
 echo ""
-echo "  URL:          http://localhost:8080"
-echo "  Game Mode:    http://localhost:8080/?mode=game"
-echo "  Asset Viewer: http://localhost:8080/"
+echo "  URL:          http://localhost:8082"
+echo "  Game Mode:    http://localhost:8082/?mode=game"
+echo "  Asset Viewer: http://localhost:8082/"
 echo ""
 
 # Show network access
 IP_ADDR=$(hostname -I 2>/dev/null | awk '{print $1}')
 if [ -n "$IP_ADDR" ]; then
-    echo "  Network:      http://$IP_ADDR:8080"
+    echo "  Network:      http://$IP_ADDR:8082"
     echo ""
 fi
 
