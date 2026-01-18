@@ -130,15 +130,8 @@ FINAL FANTASY XI/
 
 ### From Other Devices
 
-Find your Ubuntu machine's IP:
-```bash
-hostname -I
-```
+This version does not support acting as a server for other users, this version will only be playable from the machine it is running on. I am going to release a version soon that allows for you to host a local server for your friends to play on when they are on your local network.
 
-Then access from any device on your network:
-```
-http://YOUR_IP:8082
-```
 
 ## Auto-Start on Boot
 
