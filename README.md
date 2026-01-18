@@ -36,7 +36,7 @@ xim-docker/
 ├── settings.gradle.kts     
 ├── gradle.properties       
 ├── gradle/                 
-├── src/                    
+├── src/              <--Extracted from src.zip      
 └── webpack.config.d/       
 ```
 
