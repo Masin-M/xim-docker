@@ -1,6 +1,9 @@
 # Xim - Dockerized FFXI Browser Client
 
-A fully self-contained Docker setup for running Xim offline. Everything is built inside Docker - no need to install Java, Node.js, or any other dependencies on your system.
+A fully self-contained Docker setup for running Xim by Aamace offline. Everything is built inside Docker - no need to install Java, Node.js, or any other dependencies on your system.
+
+Plase use the ffxiSouncConvert and run it on your Final Fantasy directory first before installing as it takes a long time to convert the .spw and .bgw files to .ogg formats. Do not worry, it will not remove any of the original files.
+You can find it on my profile.
 
 ## Prerequisites
 
@@ -29,12 +32,12 @@ xim-docker/
 ├── nginx.conf
 ├── run.sh
 ├── .env.example
-├── build.gradle.kts        ← From source.zip
-├── settings.gradle.kts     ← From source.zip
-├── gradle.properties       ← From source.zip
-├── gradle/                 ← From source.zip
-├── src/                    ← From source.zip
-└── webpack.config.d/       ← From source.zip
+├── build.gradle.kts        
+├── settings.gradle.kts     
+├── gradle.properties       
+├── gradle/                 
+├── src/                    
+└── webpack.config.d/       
 ```
 
 **Important:** Extract the Xim source code into this same directory so the Dockerfile can access it.
@@ -63,7 +66,7 @@ docker-compose build
 # Start the server
 docker-compose up -d
 
-# Open http://localhost:8080
+# Open http://localhost:8082
 ```
 
 ### Option 3: Using .env file
@@ -121,9 +124,9 @@ FINAL FANTASY XI/
 
 ## Access
 
-- **Local:** http://localhost:8080
-- **Game Mode:** http://localhost:8080/?mode=game
-- **Asset Viewer:** http://localhost:8080/
+- **Local:** http://localhost:8082
+- **Game Mode:** http://localhost:8082/?mode=game
+- **Asset Viewer:** http://localhost:8082/
 
 ### From Other Devices
 
@@ -134,7 +137,7 @@ hostname -I
 
 Then access from any device on your network:
 ```
-http://YOUR_IP:8080
+http://YOUR_IP:8082
 ```
 
 ## Auto-Start on Boot
@@ -248,7 +251,7 @@ sudo usermod -aG docker $USER
 # Log out and back in
 ```
 
-### Port 8080 in use
+### Port 8082 in use
 
 Edit `docker-compose.yml`:
 ```yaml
